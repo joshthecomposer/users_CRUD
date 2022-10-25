@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Read (One)</title>
+</head>
+<body>
+    <div class="container">
+        <hr>
+        <h1>{{one_user.first_name}} {{one_user.last_name}}</h1>
+        <p>ID: {{one_user.id}}</p>
+        <p>Email: {{one_user.email}}</p>
+        <p>Created at: {{one_user.created_at}}</p>
+        <p>Updated at: {{one_user.updated_at}}</p>
+        <hr>
+    </div>
+    <div class="container">
+        <a class="btn btn-secondary" href="/users">Home</a>
+        <a class="btn btn-secondary" href="/users/{{ one_user.id }}/edit">Edit</a>
+        <a class="btn btn-danger" href="/users/delete/{{ one_user.id }}">Delete</a>
+    </div>
+</body>
+</html>
